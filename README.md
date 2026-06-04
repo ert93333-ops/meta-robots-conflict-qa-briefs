@@ -20,6 +20,7 @@ Billing is not connected. The MVP uses early-access, demo-request, and purchase-
 
 - Landing page: https://ert93333-ops.github.io/meta-robots-conflict-qa-briefs/
 - Checklist: https://ert93333-ops.github.io/meta-robots-conflict-qa-briefs/meta-robots-qa-checklist.html
+- GitHub Gist checklist: https://gist.github.com/ert93333-ops/2d7d65bb37a138d9b0d6db16b20cc658
 
 ## Marketing Test Links
 
