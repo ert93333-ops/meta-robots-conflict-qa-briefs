@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meta Robots QA Checklist | Meta Robots Conflict QA Briefs</title>
+    <meta
+      name="description"
+      content="A practical meta robots QA checklist for noindex, nofollow, nosnippet, X-Robots-Tag, bot-specific directives, robots.txt access, and launch checks."
+    >
+    <link rel="canonical" href="https://ert93333-ops.github.io/meta-robots-conflict-qa-briefs/meta-robots-qa-checklist.html">
+    <meta property="og:title" content="Meta robots QA checklist">
+    <meta property="og:description" content="Review noindex, nofollow, nosnippet, X-Robots-Tag, bot-specific directives, and robots.txt access before launch.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ert93333-ops.github.io/meta-robots-conflict-qa-briefs/meta-robots-qa-checklist.html">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-product="Meta Robots Conflict QA Briefs">
+    <header class="site-header" data-header>
+      <div class="shell header-inner">
+        <a class="brand" href="index.html" aria-label="Meta Robots Conflict QA Briefs home">
+          <span class="brand-mark" aria-hidden="true">MR</span>
+          <span>Meta Robots Conflict QA Briefs</span>
+        </a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html#workflow">Auditor</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#waitlist">Early access</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="article-hero section">
+        <div class="shell article-layout">
+          <div class="article-copy reveal">
+            <p class="eyebrow">Meta robots QA checklist</p>
+            <h1>Review robots directives before publishing or migrating.</h1>
+            <p class="hero-subtitle">
+              Use this checklist to catch noindex, nofollow, nosnippet, noarchive,
+              X-Robots-Tag disagreements, bot-specific conflicts, and robots.txt access problems.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="index.html#workflow" data-track-cta="checklist_audit">Audit robots directives</a>
+              <a class="button secondary" href="index.html#waitlist" data-track-cta="checklist_waitlist">Request early access</a>
+            </div>
+          </div>
+
+          <div class="product-preview reveal">
+            <div class="preview-header">
+              <span class="status-dot"></span>
+              <span>prelaunch robots review</span>
+            </div>
+            <div class="brief-preview">
+              <p class="brief-label">Checklist principle</p>
+              <strong>Robots QA is access and presentation logic.</strong>
+              <p>Review page-level meta tags, response headers, bot-specific directives, and robots.txt together before release.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band">
+        <div class="shell content-narrow">
+          <article class="guide-block reveal">
+            <h2>1. Export page-level robots directives</h2>
+            <ol class="guide-list">
+              <li>Capture the final rendered HTML head for launch-relevant templates.</li>
+              <li>Flag accidental `noindex` on pages that should be indexable.</li>
+              <li>Confirm `nofollow`, `nosnippet`, `noarchive`, and `max-snippet` restrictions are intentional.</li>
+              <li>Review staging, preview, test, QA, draft, and localhost rows separately.</li>
+            </ol>
+          </article>
+
+          <article class="guide-block reveal">
+            <h2>2. Compare X-Robots-Tag headers</h2>
+            <ol class="guide-list">
+              <li>Export response headers for HTML routes, PDFs, feeds, and downloadable files.</li>
+              <li>Flag X-Robots-Tag `noindex` on launch URLs intended to be visible in search.</li>
+              <li>Find headers that disagree with page-level meta robots values.</li>
+              <li>Retest after CDN, middleware, or static host rules change.</li>
+            </ol>
+          </article>
+
+          <article class="guide-block reveal">
+            <h2>3. Review bot-specific conflicts</h2>
+            <ol class="guide-list">
+              <li>Compare generic `robots` directives with `googlebot` and `bingbot` directives.</li>
+              <li>Flag cases where one bot receives `noindex` and another receives `index`.</li>
+              <li>Document every intentional bot-specific snippet or cache restriction.</li>
+              <li>Keep launch notes clear when directives differ by crawler.</li>
+            </ol>
+          </article>
+
+          <article class="guide-block reveal">
+            <h2>4. Confirm robots.txt access</h2>
+            <ol class="guide-list">
+              <li>Check whether robots.txt blocks launch pages that rely on meta robots directives.</li>
+              <li>Remember that crawlers need access to the page to see page-level meta tags.</li>
+              <li>Remove stale staging disallow rules before production launch when appropriate.</li>
+              <li>Retest after robots.txt deployment and cache invalidation.</li>
+            </ol>
+          </article>
+
+          <article class="guide-block reveal">
+            <h2>5. Copyable robots QA handoff</h2>
+            <pre class="template-block">Meta robots conflict QA
+
+Launch context:
+Launch intent:
+
+Counts
+- URL/head rows:
+- X-Robots-Tag rows:
+- robots.txt Disallow rules:
+
+Risks to fix
+- Intended indexable URLs with noindex:
+- X-Robots-Tag vs meta robots disagreements:
+- Bot-specific conflicts:
+- Nofollow/nosnippet/noarchive/max-snippet restrictions:
+- robots.txt access conflicts:
+
+Decision
+- Fix before launch / Manual review / Ready for final robots check</pre>
+            <a class="button primary" href="index.html#workflow" data-track-cta="template_to_product">Generate a robots directive conflict QA brief</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <span>Meta Robots Conflict QA Briefs</span>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
